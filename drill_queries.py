@@ -21,8 +21,8 @@ def employees_with_projects(db_path):
         query = """
         SELECT e.name, p.name
         FROM employees e
-        JOIN project_assignments pa ON e.employee_id = pa.employee_id
-        JOIN projects p ON pa.project_id = p.id
+        JOIN project_assignments pa ON e.emp_id = pa.emp_id
+        JOIN projects p ON pa.project_id = p.project_id
         """
         cursor.execute(query)
         results = cursor.fetchall()
