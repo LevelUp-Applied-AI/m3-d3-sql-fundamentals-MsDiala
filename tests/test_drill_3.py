@@ -1,6 +1,9 @@
 """Autograder tests for Module 3 Core Skills Drill."""
 import sqlite3
+import sys
 from pathlib import Path
+sys.path.append(str(Path(__file__).resolve().parent.parent))
+
 
 
 def test_drill_queries_file_exists():
